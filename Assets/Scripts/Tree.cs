@@ -6,7 +6,7 @@ public class Tree : MonoBehaviour
 {
     private MeshRenderer rd;
 
-    void Sart()
+    void Start()
     {
         rd = GetComponent<MeshRenderer>();
     }
@@ -17,7 +17,8 @@ public class Tree : MonoBehaviour
 
         Player player = collision.gameObject.GetComponent<Player>();
         player.HP -= 15;
-        MainUI.Instance.ShowNotiText("Hit -15\nHP: " + player.HP);
+        // MainUI.Instance.ShowNotiText("Hit -15\nHP: " + player.HP); // #3
+        MainUI.Instance.ShowNotiText($"Hit -15\nHP:{player.HP}"); // #1
 
         if (player.HP < 0)
         {

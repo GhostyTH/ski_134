@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build;
 using UnityEngine;
 
-public class PlayerControls : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [SerializeField]
     private Rigidbody rb;
@@ -12,6 +13,11 @@ public class PlayerControls : MonoBehaviour
 
     [SerializeField]
     private float xInput;
+
+    [SerializeField]
+    public int hp = 100;
+
+    public int HP { get { return hp; } set { hp = value; } }
 
     // Start is called before the first frame update
     void Start()

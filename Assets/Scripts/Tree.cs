@@ -24,6 +24,7 @@ public class Tree : MonoBehaviour
         {
             player.HP = 0;
             MainUI.Instance.ShowNotiText("You are dead!");
+            Time.timeScale = 0;
         }
     }
 

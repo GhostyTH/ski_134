@@ -10,5 +10,6 @@ public class Flag : MonoBehaviour
         player.Point += 10;
 
         MainUI.Instance.ShowNotiText($"10\nCurrent Score: {player.Point}");
+        Destroy(gameObject);
     }
 }
